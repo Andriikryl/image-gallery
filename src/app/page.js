@@ -1,6 +1,9 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
 export default function Home() {
-  return <h1>sad</h1>;
+  return (
+    <main className="">
+      {[...Array(19).keys()].map((_, index) => {
+        return <img key={index} src={`/images/${index}.jpg`}></img>;
+      })}
+    </main>
+  );
 }
